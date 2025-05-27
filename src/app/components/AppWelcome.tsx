@@ -1,8 +1,24 @@
+  'use client'
+  
 export default function AppWelcome() {
+    const title = 'Welcome to COSCI';
+    const currentYear = <p>2025</p>;
+    const isShow = true;
+    const handleClick = () => {
+        alert('Hello TypeScript');
+    }
+
   return (
     <>
-    <p>Welcome to COSCI</p>
-    
+    <p>{title.toUpperCase()}</p>
+    <button onClick={handleClick}>กดได้เลย!</button>
+    {currentYear}
+    {
+        isShow && <p>Date: 10/10/1998</p>
+    }
+    {
+        isShow ? <p>Hello Next.js</p> : <p>Hello Javascript</p>
+    }
     </>
   );
 }
