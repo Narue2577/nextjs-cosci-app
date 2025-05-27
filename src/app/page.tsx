@@ -4,7 +4,7 @@ export default function Home() {
     <>
     <h1>Home Page</h1>
     <hr />
-    <AppWelcome headTitle="Yannawa" isShow={false}/>
+    <AppWelcome headTitle="Yannawa" isShow={true}/>
     <AppWelcome headTitle="Sathudpradit" isShow={false}/>
     <AppWelcome headTitle="SWU" isShow={true}/>
     </>
