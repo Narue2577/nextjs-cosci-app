@@ -1,0 +1,19 @@
+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 github classic token
+
+https://github.com/Narue2577/nextjs-cosci-app
+
+https://github.com/codingwithcopper/nextjs-cosci-app
+
+1.npm install
+2.npm run dev
+
+Slides and Resources
+https://tinyurl.com/7n85ewbm
+
+Git -> Javascript -> TypeScript -> React -> Next.js
+
+git add .
+git commit -m "update code"
+git push -u origin main
+
+git push
