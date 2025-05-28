@@ -1,12 +1,9 @@
-import AppWelcome from "./components/AppWelcome"
+import Hero02 from "@/components/hero-02/hero-02";
 export default function Home() {
   return (
     <>
-    <h1>Home Page</h1>
-    <hr />
-    <AppWelcome headTitle="Yannawa" isShow={true}/>
-    <AppWelcome headTitle="Sathudpradit" isShow={false}/>
-    <AppWelcome headTitle="SWU" isShow={true}/>
+    <Hero02 />
+    
     </>
   );
 }
