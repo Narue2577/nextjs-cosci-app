@@ -1,5 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Select,
@@ -9,9 +8,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import db from "@/db";
-import { ChevronRight } from "lucide-react";
 import { product } from "@/db/schema";
 import { desc } from "drizzle-orm";
+import CartButton from "../components/CartButton";
 
 const Products = async () => {
   const products = await db.query.product.findMany({
@@ -48,13 +47,11 @@ const Products = async () => {
                 </Badge>
               </div>
 
-              <h3 className="mt-4 text-[1.35rem] font-semibold tracking-tight">
+              <h2 className="mt-4 text-[1.35rem] font-semibold tracking-tight">
                 {i.title}
-              </h3>
+              </h2>
 
-              <Button className="mt-6 shadow-none">
-                หยิบใส่ตะกร้า  <ChevronRight />
-              </Button>
+             <CartButton product={i} />
             </CardContent>
           </Card>
         ))}
