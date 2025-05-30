@@ -4,12 +4,12 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -19,18 +19,18 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const formSchema = z.object({
-  email: z.string().email("Your email is invalid").min(1, "Email is required"),
-  password: z.string().min(8, "Password must be at least 8 characters long"),
+    email: z.string().email("Your email is invalid").min(1, "Email is required"),
+    password: z.string().min(8, "Password must be at least 8 characters long"),
 });
 
 const Signup01Page = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
+    const form = useForm<z.infer<typeof formSchema>>({
     defaultValues: {
-      email: "",
-      password: "",
+        email: "",
+        password: "",
     },
     resolver: zodResolver(formSchema),
-  });
+    });
 
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     console.log(data);
@@ -102,7 +102,7 @@ const Signup01Page = () => {
         <div className="mt-5 space-y-5">
           <p className="text-sm text-center">
            You already have an account?
-            <Link href="/signup" className="ml-1 underline text-muted-foreground">
+            <Link href="/login" className="ml-1 underline text-muted-foreground">
               Signup
             </Link>
           </p>
